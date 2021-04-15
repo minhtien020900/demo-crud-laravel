@@ -10,12 +10,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
+
 <body>
 
 
-    @include('layout.navigation')
-    <div class="container">
+@include('layout.navigation')
+<div class="container">
+
     @yield('content')
 </div>
 
