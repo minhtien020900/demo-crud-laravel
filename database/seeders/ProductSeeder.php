@@ -18,11 +18,11 @@ class ProductSeeder extends Seeder
     {
         for ($i = 0; $i < 5; $i++) {
             DB::table('products')->insert([
-                'name' => 'Product '.$i,
+                'product_name' => 'Product '.$i,
                 'category_name'=>'Category name '.$i,
-                'desc'=>'Description '.$i,
-                'price'=>10000,
-                'image'=>'image-name '.$i,
+                'product_desc'=>'Description '.$i,
+                'product_price'=>10000,
+                'product_image'=>'image-name '.$i,
             ]);
         }
     }

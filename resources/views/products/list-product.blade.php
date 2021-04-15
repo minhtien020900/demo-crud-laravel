@@ -206,10 +206,10 @@
                     @foreach($products as $key => $product)
                         <tr>
 
-                            <td>{{$product->name}}</td>
+                            <td>{{$product->product_name}}</td>
                             <td>{{$product->category_name}}</td>
-                            <td>{{$product->desc}}</td>
-                            <td>{{$product->price}}</td>
+                            <td>{{$product->product_desc}}</td>
+                            <td>{{$product->product_price}}</td>
 {{--                            <td>{{$product->image}}</td>--}}
                             <td>
 
