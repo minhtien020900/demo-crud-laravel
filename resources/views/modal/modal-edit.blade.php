@@ -1,4 +1,4 @@
-@include('layout.navigation')
+
 <style>
     /*.modal .modal-dialog {*/
     /*    max-width: 800px;*/
@@ -41,43 +41,36 @@
         font-weight: normal;
     }
 </style>
-<div id="addModal" class="modal fade">
+<div id="editProduct" class="modal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form
-                action="{{$product_row?route('list-product.update',['list_product'=>$product_row->id]):route('list-product.store')}}"
-                method="post" id="frmModal">
-                @if($product_row)
-                    @method('PUT')
-                @endif
+            <form action="{{route('list-product.store')}}" method="post" id="frmModal">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add product</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Edit product</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" name="product_name" id="product_name" required
-                               value="{{$product_row?$product_row->product_name:''}}"
+                        <input type="text" class="form-control" name="product_name"
+                               id="product_name" required
+                               value="{{$product->product_name}}"
                         >
                     </div>
                     <div class="form-group">
                         <label>Category</label>
-                        <input type="email" class="form-control" name="category_name" required
-                               value="{{$product_row?$product_row->category_name:''}}">
+                        <input type="email" class="form-control" name="category_name" required>
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" name="product_desc" required
-                                  value="{{$product_row?$product_row->product_desc:''}}"
-                        ></textarea>
+                        <textarea class="form-control" name="product_desc" required></textarea>
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <input type="text" class="form-control" name="product_price" required
-                               value="{{$product_row?$product_row->product_price:''}}"
-                        >
+                        <input type="text" class="form-control" name="product_price" required>
                     </div>
                     {{--                    <div >--}}
                     {{--                        <label>Image</label>--}}
@@ -85,7 +78,8 @@
                     {{--                    </div>--}}
                 </div>
                 <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="button" class="btn btn-default" data-dismiss="modal"
+                           value="Cancel">
                     <input type="submit" class="btn btn-info" value="Save">
                 </div>
             </form>

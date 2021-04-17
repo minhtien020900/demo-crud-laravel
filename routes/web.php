@@ -21,3 +21,4 @@ Route::get('/', function () {
 //Route::get('/list-product', [ProductController::class, 'index'])->name('list-product');
 Route::resource('list-product',\App\Http\Controllers\ProductController::class);
 
+Route::get('/test',[\App\Http\Controllers\ProductController::class,'test']);
