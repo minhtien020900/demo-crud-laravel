@@ -205,9 +205,24 @@
     .modal form label {
     font-weight: normal;
     }
+    #product_image_thumnail{
+
+    height:70px;
+    }
 @endsection
 @section('content')
-
+    @if($errors->any() )
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </div>
+    @endif()
+    @if(session('success'))
+        <div class="alert alert-success">
+          {{session('success')}}
+        </div>
+    @endif()
     <div class="table-data">
         <div class="table-responsive">
             <div class="table-wrapper">
@@ -230,7 +245,7 @@
                         <th>Category</th>
                         <th>Description</th>
                         <th>Price</th>
-                        {{--                        <th>Image</th>--}}
+                        <th>Image</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -242,7 +257,8 @@
                             <td>{{$product->category_name}}</td>
                             <td>{{$product->product_desc}}</td>
                             <td>{{$product->product_price}}</td>
-                            {{--                            <td>{{$product->image}}</td>--}}
+                            <td><img id="product_image_thumnail" alt="{{$product->product_image}}"
+                                     src="{{asset('storage/images/'. $product->product_image)}}"></td>
                             <td>
                                 <a id="btnEdit{{$product->id}}"
                                    href="{{route('list-product.edit',['list_product'=>$product->id])}}"
@@ -278,10 +294,15 @@
         </div>
 
         @isset($nameModal)
-            <script>
-                console.log('{{$nameModal}}');
-                $('#{{$nameModal}}').modal('show');
-            </script>
+            @if(!count($errors)>0)
+                <script>
+                    console.log('{{$nameModal}}');
+                    $('#{{$nameModal}}').modal('show');
+                </script>
+    @endif()
+
     @endisset()
+
+
 @endsection
 

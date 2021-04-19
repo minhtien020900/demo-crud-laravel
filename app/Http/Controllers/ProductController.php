@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create(Request $request)
     {
-        return view('products.list-product', ['product_row' => null, 'products' => Product::all(),'nameModal'=>'addModal']);
+        return view('products.list-product', ['product_row' => null, 'products' => Product::all(), 'nameModal' => 'addModal']);
 
     }
 
@@ -39,9 +39,24 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'product_name' => 'required',
+            'category_name' => 'required',
+            'product_desc' => 'required',
+            'product_price' => 'required',
+            'product_image' => 'required',
+        ]);
+        $fileName = time() . '-' . $request->file('product_image')->getClientOriginalName();
+        $product = new Product([
+            'product_name' => $request->product_name,
+            'category_name' => $request->category_name,
+            'product_desc' => $request->product_desc,
+            'product_price' => $request->product_price,
+            'product_image' => basename($request->file('product_image')->storeAs('public/images', $fileName))
+        ]);
 
-        Product::create($request->all());
-        return redirect()->route('list-product.index');
+        $product->save();
+        return redirect()->route('list-product.index')->with('success', "Add product success");
 
     }
 
@@ -83,14 +98,25 @@ class ProductController extends Controller
      */
     public function update(Request $request, int $id)
     {
+        $request->validate([
+            'product_name' => 'required',
+            'category_name' => 'required',
+            'product_desc' => 'required',
+            'product_price' => 'required',
+//            'product_image' => 'required',
+        ]);
+        if ($request->file('product_image')->isValid()) {
+            $fileName = time() . '-' . $request->file('product_image')->getClientOriginalName();
+        }
+
         $product = Product::find($id);
         $product->product_name = $request->product_name;
         $product->category_name = $request->category_name;
         $product->product_desc = $request->product_desc;
-        $product->product_image = $request->product_image;
+        $product->product_image = basename($request->file('product_image')->storeAs('public/images', $fileName));
         $product->product_price = $request->product_price;
         $product->save();
-        return redirect()->route('list-product.index');
+        return redirect()->route('list-product.index')->with('success', 'Update product successfully');
     }
 
     /**
