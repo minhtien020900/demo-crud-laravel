@@ -4,56 +4,43 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
 
     public function index()
     {
 
-        return view('products.list-product')->with(['products'=> Product::all(),'nameModal'=>'','product_row'=>null]);
+        return view('products.list-product')->with(['products' => Product::all(), 'product_row' => null]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create(Request $request)
     {
-        //
-//        $product = new Product();
-//        $product->product_name="";
-//        $product->category_name="";
-//        $product->product_desc="";
-//        $product->product_price="";
-
-//        return view('modal.modal-add',['product'=>$product]);
-        return view('products.list-product',['product_row'=>null,'products'=>Product::all(),'nameModal'=>'addModal']);
+        return view('products.list-product', ['product_row' => null, 'products' => Product::all(),'nameModal'=>'addModal']);
 
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
-    {//
+    {
 
-        $product = new Product();
-        $product->product_name = $request->product_name;
-        $product->category_name = $request->category_name;
-        $product->product_desc = $request->product_desc;
-        $product->product_image = $request->product_image;
-        $product->product_price = $request->product_price;
-        $product->save();
+        Product::create($request->all());
         return redirect()->route('list-product.index');
 
     }
@@ -67,7 +54,7 @@ class ProductController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -78,25 +65,23 @@ class ProductController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
-        //
         $product = Product::find($id);
-
-        return view('products.list-product',['products'=>Product::all(),'product_row'=>$product,'nameModal'=>'addModal']);
+        return view('products.list-product', ['products' => Product::all(), 'product_row' => $product, 'nameModal' => 'addModal']);
 
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request,int $id)
+    public function update(Request $request, int $id)
     {
         $product = Product::find($id);
         $product->product_name = $request->product_name;
@@ -105,17 +90,20 @@ class ProductController extends Controller
         $product->product_image = $request->product_image;
         $product->product_price = $request->product_price;
         $product->save();
-             return  redirect()->route('list-product.index');
+        return redirect()->route('list-product.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
         //
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('list-product.index');
     }
 }
