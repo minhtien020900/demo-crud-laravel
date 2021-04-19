@@ -4,8 +4,8 @@
 <div id="modalConfirm" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            @isset($product)
-            <form action="{{route('list-product.destroy',['list_product' =>$product->id])}}" method="POST">
+            @isset($id)
+            <form action="{{route('list-product.destroy',['list_product' =>$id])}}" method="POST">
                 @method('DELETE')
                 @csrf
                 <div class="modal-header">

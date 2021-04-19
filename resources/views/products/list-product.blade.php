@@ -267,7 +267,7 @@
                                 ><i
                                         class="material-icons"
                                         title="Edit">&#xE254;</i></a>
-                                <a href="#modalConfirm" class="delete" data-toggle="modal"><i
+                                <a href="{{route('list-product.show',['list_product'=>$product->id])}}" class="delete" ><i
                                         class="material-icons"
                                         data-toggle="tooltip"
                                         title="Delete">&#xE872;</i></a>

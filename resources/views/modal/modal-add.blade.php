@@ -41,7 +41,7 @@
                     <div>
                         <label>Image</label>
                         <input type="hidden" value="{{$product_row?$product_row->product_image:''}}">
-                        <input type=" file" name="product_image" class="form-control"
+                        <input type="file" name="product_image" class="form-control"
                         >
                     </div>
                 </div>

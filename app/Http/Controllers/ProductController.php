@@ -59,11 +59,13 @@ class ProductController extends Controller
         return redirect()->route('list-product.index')->with('success', "Add product success");
 
     }
+    public function showModalDelete($id){
 
-    public function test(Request $request)
-    {
-        return $request->all();
     }
+//    public function tes1Request ($request)
+//    {
+//        return $request->all();
+//    }
 
     /**
      * Display the specified resource.
@@ -74,6 +76,11 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+
+        $nameModal = 'modalConfirm';
+        $products = Product::all();
+        $product_row = $products->find($id);
+        return view('products.list-product', compact('id','nameModal','products','product_row'));
     }
 
     /**
@@ -127,9 +134,11 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('list-product.index');
     }
+
+
 }
