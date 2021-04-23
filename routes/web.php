@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +17,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name("home");
+//Route::middleware(['auth'])->group(function () {
+//    Route::get('/', function () {
+//        return view('index');
+//    })->name("home");
+//});
 
 //Route::get('/list-product', [ProductController::class, 'index'])->name('list-product');
-Route::resource('list-product',\App\Http\Controllers\ProductController::class);
+Route::get('/',function (){
+   return view('index');
+})->name('home');
+Route::resource('list-product', \App\Http\Controllers\ProductController::class)->middleware('AdminRole');
 
-Route::get('/test',[\App\Http\Controllers\ProductController::class,'test']);
+Route::get('/test', [\App\Http\Controllers\ProductController::class, 'test']);
+
+Auth::routes();
+
+//Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+Route::get('logout', function () {
+    Auth::logout();
+    Session::regenerate();
+    return redirect('/login');
+});
