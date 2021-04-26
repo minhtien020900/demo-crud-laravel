@@ -17,19 +17,20 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-//Route::middleware(['auth'])->group(function () {
-//    Route::get('/', function () {
-//        return view('index');
-//    })->name("home");
-//});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+        return view('index');
+    })->name("home");
+});
 
 //Route::get('/list-product', [ProductController::class, 'index'])->name('list-product');
 Route::get('/',function (){
    return view('index');
 })->name('home');
-Route::resource('list-product', \App\Http\Controllers\ProductController::class)->middleware('AdminRole');
+Route::resource('list-product',ProductController::class)->middleware('AdminRole');
+//Route::resource('/list-product', [ProductController::class])->middleware('AdminRole');
 
-Route::get('/test', [\App\Http\Controllers\ProductController::class, 'test']);
+Route::get('/test', [ProductController::class, 'test']);
 
 Auth::routes();
 

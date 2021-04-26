@@ -18,8 +18,10 @@ class AdminRole
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check() && Auth::user()->role === 0) {
+//            var_dump('login');die();
             return $next($request);
         } else {
+//            var_dump('not login');
             return redirect('/login');
         }
 
