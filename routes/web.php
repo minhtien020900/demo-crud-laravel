@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-        return view('index');
-    })->name("home");
-});
+//Route::middleware(['auth'])->group(function () {
+//    Route::get('/', function () {
+//        return view('index');
+//    })->name("home");
+//});
 
 //Route::get('/list-product', [ProductController::class, 'index'])->name('list-product');
 Route::get('/',function (){

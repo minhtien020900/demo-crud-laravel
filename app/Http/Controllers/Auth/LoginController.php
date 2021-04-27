@@ -41,12 +41,12 @@ class LoginController extends Controller
 
     public function authenticated(Request $request)
     {
-        if (Auth::user()->role == 0) {
+        if (Auth::user()->role == 1) {
             $this->redirectTo = 'list-product';
             return redirect($this->redirectTo);
         } else {
             $this->redirectTo = '/login';
-            return redirect($this->redirectTo);
+            return redirect($this->redirectTo)->with('res',"'You don't have permission");
         }
     }
 

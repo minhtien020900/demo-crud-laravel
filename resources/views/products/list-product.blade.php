@@ -220,7 +220,7 @@
     @endif()
     @if(session('success'))
         <div class="alert alert-success">
-          {{session('success')}}
+            {{session('success')}}
         </div>
     @endif()
     <div class="table-data">
@@ -258,7 +258,7 @@
                             <td>{{$product->product_desc}}</td>
                             <td>{{$product->product_price}}</td>
                             <td><img id="product_image_thumnail" alt="{{$product->product_image}}"
-                                     src="{{asset('storage/images/'. $product->product_image)}}"></td>
+                                     src="{{ asset('storage/images/'. $product->product_image)}}"></td>
                             <td>
                                 <a id="btnEdit{{$product->id}}"
                                    href="{{route('list-product.edit',['list_product'=>$product->id])}}"
@@ -267,7 +267,8 @@
                                 ><i
                                         class="material-icons"
                                         title="Edit">&#xE254;</i></a>
-                                <a href="{{route('list-product.show',['list_product'=>$product->id])}}" class="delete" ><i
+                                <a href="{{route('list-product.show',['list_product'=>$product->id])}}"
+                                   class="delete"><i
                                         class="material-icons"
                                         data-toggle="tooltip"
                                         title="Delete">&#xE872;</i></a>
