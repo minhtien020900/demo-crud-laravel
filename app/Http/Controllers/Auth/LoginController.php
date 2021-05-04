@@ -41,7 +41,7 @@ class LoginController extends Controller
 
     public function authenticated(Request $request)
     {
-        if (Auth::user()->role == 1) {
+        if (Auth::user()->role == 0) {
             $this->redirectTo = 'list-product';
             return redirect($this->redirectTo);
         } else {
