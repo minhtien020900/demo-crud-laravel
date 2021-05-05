@@ -220,7 +220,7 @@
     @endif()
     @if(session('success'))
         <div class="alert alert-success">
-          {{session('success')}}
+            {{session('success')}}
         </div>
     @endif()
     <div class="table-data">
@@ -244,35 +244,45 @@
                         <th>Name</th>
                         <th>Category</th>
                         <th>Description</th>
+                        <th>Category name</th>
                         <th>Price</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
+{{--                    @foreach($categories as $key => $cate)--}}
+{{--                        {{  $cate->category_name }}--}}
+{{--                    @endforeach--}}
                     @foreach($products as $key => $product)
-                        <tr>
-                            <td>{{$product->id}}</td>
-                            <td>{{$product->product_name}}</td>
-                            <td>{{$product->category_name}}</td>
-                            <td>{{$product->product_desc}}</td>
-                            <td>{{$product->product_price}}</td>
-                            <td><img id="product_image_thumnail" alt="{{$product->product_image}}"
-                                     src="{{asset('storage/images/'. $product->product_image)}}"></td>
-                            <td>
-                                <a id="btnEdit{{$product->id}}"
-                                   href="{{route('list-product.edit',['list_product'=>$product->id])}}"
-                                   class="edit"
+                        @foreach($categories as $key => $category)
+                            @if($product->category_id==$category->id)
+                                <tr>
+                                    <td>{{$product->id}}</td>
+                                    <td>{{$product->product_name}}</td>
+                                    <td>{{$category->category_name}}</td>
+                                    <td>{{$product->product_desc}}</td>
+                                    <td>{{$product->product_price}}</td>
+                                    <td><img id="product_image_thumnail" alt="{{$product->product_image}}"
+                                             src="{{ asset('storage/images/'. $product->product_image)}}"></td>
+                                    <td>
+                                        <a id="btnEdit{{$product->id}}"
+                                           href="{{route('list-product.edit',['list_product'=>$product->id])}}"
+                                           class="edit"
 
-                                ><i
-                                        class="material-icons"
-                                        title="Edit">&#xE254;</i></a>
-                                <a href="{{route('list-product.show',['list_product'=>$product->id])}}" class="delete" ><i
-                                        class="material-icons"
-                                        data-toggle="tooltip"
-                                        title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr>
+                                        ><i
+                                                class="material-icons"
+                                                title="Edit">&#xE254;</i></a>
+                                        <a href="{{route('list-product.show',['list_product'=>$product->id])}}"
+                                           class="delete"><i
+                                                class="material-icons"
+                                                data-toggle="tooltip"
+                                                title="Delete">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                            @endif
+
+                        @endforeach
                     @endforeach
                     </tbody>
                 </table>

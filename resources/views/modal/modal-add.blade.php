@@ -22,9 +22,14 @@
                         >
                     </div>
                     <div class="form-group">
-                        <label>Category</label>
-                        <input type="text" class="form-control" name="category_name"
-                               value="{{$product_row?$product_row->category_name:''}}">
+                        <label>Category Name</label>
+                        <select name="category_id">
+                            @foreach($categories as $key => $cate)
+                                <option value="{{$cate->id}}">{{ $cate->category_name }}</option>
+                            @endforeach
+                        </select>
+{{--                        <input type="text" class="form-control" name="category_name"--}}
+{{--                               value="{{$product_row?$product_row->category_name:''}}">--}}
                     </div>
                     <div class="form-group">
                         <label>Description</label>
