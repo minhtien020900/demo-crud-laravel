@@ -46,8 +46,35 @@ class LoginController extends Controller
             return redirect($this->redirectTo);
         } else {
             $this->redirectTo = '/login';
-            return redirect($this->redirectTo)->with('res',"'You don't have permission");
+            return redirect($this->redirectTo)->with('res', "You don't have permission");
         }
     }
 
+//    public function username()
+//    {
+//        return 'username';
+//    }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required'
+
+        ]);
+        $fieldType = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
+//        $credentials = $request->only('email', 'password');
+        if (auth()->attempt(array($fieldType => $input['email'], 'password' => $input['password']))) {
+            return redirect()->route('list-product.index');
+        }
+//        if (\auth()->attempt(['name' => $input['email'], 'password' => $input['password']])) {
+//            return redirect()->route('list-product');
+//        }
+        else {
+            return redirect()->route('login')
+                ->with('res','Email-Address And Password Are Wrong.');
+        }
+
+    }
 }

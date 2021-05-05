@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -17,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
 
-        return view('products.list-product')->with(['products' => Product::all(), 'product_row' => null]);
+        return view('products.list-product')->with(['products' => Product::all(), 'product_row' => null,'categories'=>Category::all()]);
     }
 
     /**
@@ -27,7 +28,7 @@ class ProductController extends Controller
      */
     public function create(Request $request)
     {
-        return view('products.list-product', ['product_row' => null, 'products' => Product::all(), 'nameModal' => 'addModal']);
+        return view('products.list-product', ['product_row' => null, 'products' => Product::all(), 'nameModal' => 'addModal','categories'=>Category::all()]);
 
     }
 
@@ -41,7 +42,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
-            'category_name' => 'required',
+            'category_id' => 'required',
             'product_desc' => 'required',
             'product_price' => 'required',
             'product_image' => 'required',
@@ -49,7 +50,7 @@ class ProductController extends Controller
         $fileName = time() . '-' . $request->file('product_image')->getClientOriginalName();
         $product = new Product([
             'product_name' => $request->product_name,
-            'category_name' => $request->category_name,
+            'category_id' => $request->category_id,
             'product_desc' => $request->product_desc,
             'product_price' => $request->product_price,
             'product_image' => basename($request->file('product_image')->storeAs('public/images', $fileName))

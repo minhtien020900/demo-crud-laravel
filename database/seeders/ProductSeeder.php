@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
         for ($i = 0; $i < 5; $i++) {
             DB::table('products')->insert([
                 'product_name' => 'Product '.$i,
-                'category_name'=>'Category name '.$i,
+                'category_id'=>1,
                 'product_desc'=>'Description '.$i,
                 'product_price'=>10000,
                 'product_image'=>'image-name '.$i,
