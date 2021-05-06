@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name("home");
+    return view('welcome');
+});
 
-//Route::get('/list-product', [ProductController::class, 'index'])->name('list-product');
-Route::resource('list-product',\App\Http\Controllers\ProductController::class);
+Auth::routes();
 
-Route::get('/test',[\App\Http\Controllers\ProductController::class,'test']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
