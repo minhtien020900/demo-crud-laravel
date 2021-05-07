@@ -1,0 +1,1 @@
+@extends('sidebars.slide-menu')
