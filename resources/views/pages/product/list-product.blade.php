@@ -1,92 +1,136 @@
-
-@extends('pages.admin.dashboard')
-@section('content')
-@if($errors->any() )
-<div class="alert alert-danger">
-    @foreach($errors->all() as $error)
-        <li>{{$error}}</li>
-    @endforeach
-</div>
-@endif()
-@if(session('success'))
-<div class="alert alert-success">
-    {{session('success')}}
-</div>
-@endif()
-<div class="table-data">
-<div class="table-responsive">
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>Manage <b>Products</b></h2>
-                </div>
-                <div class="col-sm-6">
-                    <a href="{{route('list-product.create')}}" class="btn btn-success"><i
-                            class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
-                </div>
-            </div>
-        </div>
-        <table class="table table-striped table-hover">
+@extends('layouts.shared.table')
+@section('content-table')
+    <div class="QA_table mb_30">
+        <!-- table-responsive -->
+        <table class="table lms_table_active ">
             <thead>
             <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Category name</th>
-                <th>Price</th>
-                <th>Image</th>
-                <th>Action</th>
+                <th scope="col">title</th>
+                <th scope="col">Category</th>
+                <th scope="col">Teacher</th>
+                <th scope="col">Lesson</th>
+                <th scope="col">Enrolled</th>
+                <th scope="col">Price</th>
+                <th scope="col">Status</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($products as $key => $product)
-                @foreach($categories as $key => $category)
-                    @if($product->category_id==$category->id)
-                        <tr>
-                            <td>{{$product->id}}</td>
-                            <td>{{$product->product_name}}</td>
-                            <td>{{$category->category_name}}</td>
-                            <td>{{$product->product_desc}}</td>
-                            <td>{{$product->product_price}}</td>
-                            <td><img id="product_image_thumnail" alt="{{$product->product_image}}"
-                                     src="{{ asset('storage/images/'. $product->product_image)}}"></td>
-                            <td>
-                                <a id="btnEdit{{$product->id}}"
-                                   href="{{route('list-product.edit',['list_product'=>$product->id])}}"
-                                   class="edit"
-
-                                ><i
-                                        class="material-icons"
-                                        title="Edit">&#xE254;</i></a>
-                                <a href="{{route('list-product.show',['list_product'=>$product->id])}}"
-                                   class="delete"><i
-                                        class="material-icons"
-                                        data-toggle="tooltip"
-                                        title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                    @endif
-
-                @endforeach
-            @endforeach
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="#" class="question_content"> title here 1</a></th>
+                <td>Category name</td>
+                <td>Teacher James</td>
+                <td>Lessons name</td>
+                <td>16</td>
+                <td>$25.00</td>
+                <td><a href="#" class="status_btn">Active</a></td>
+            </tr>
             </tbody>
         </table>
-        @include('modal.modal-add')
-        @include('modal.modal-confirm')
-        <div class="clearfix">
-            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-            <ul class="pagination">
-                <li class="page-item disabled"><a href="#">Previous</a></li>
-                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                <li class="page-item"><a href="#" class="page-link">Next</a></li>
-            </ul>
-        </div>
     </div>
-</div>
+@endsection
+@section('js-content')
+    <!-- responsive table -->
+    <script src="{{asset('vendors/datatable/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/buttons.flash.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/jszip.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/pdfmake.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/vfs_fonts.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('vendors/datatable/js/buttons.print.min.js')}}"></script>
+
+    <!-- scrollabe  -->
+    <script src="{{asset('vendors/scroll/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{asset('vendors/scroll/scrollable-custom.js')}}"></script>
 @endsection

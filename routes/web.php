@@ -18,15 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/admin', function () {
     return view('pages.admin.dashboard');
 })->name('admin-dashboard');
+Route::get('/admin/list-product', function () {
+    return view('pages.product.list-product');
+})->name('list-product');
 // Route::get('/add-product', [ProductController::class,'create'])->name('add-product');
-Route::resource('product',ProductController::class);
+Route::resource('product', ProductController::class);
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

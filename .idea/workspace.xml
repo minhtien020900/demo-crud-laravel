@@ -2,14 +2,183 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07182b6f-1a22-4bee-ae95-cf32babf4077" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/colors/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/metisMenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/preloader.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/cubes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/layout-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/manage-category.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/manage-product.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/metisMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/amchart-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/amcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/ammap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/amstock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/dataloader.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/export.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/serial.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/am_chart/worldLow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/animation/tilt/tilt-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/animation/tilt/tilt.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/animation/wow/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/animation/wow/wow-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/animation/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/apex_chart/apex_chart_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/apex_chart/apex_dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/apex_chart/apexchart_lists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/apex_chart/apexcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/apex_chart/bar_active_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/activation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/core/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/core/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/daygrid/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/daygrid/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/interaction/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/list/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/list/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/timegrid/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/calender_js/timegrid/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chart_am/animated.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chart_am/chart-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chart_am/charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chart_am/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chart_am/kelly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chartjs/chartjs_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/chartlist/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/count_up/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/count_up/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/css/buttons.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/css/responsive.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/images/sort_asc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/images/sort_asc_disabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/images/sort_both.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/images/sort_desc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/images/sort_desc_disabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/buttons.flash.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/buttons.html5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/buttons.print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/dataTables.buttons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/dataTables.responsive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/pdfmake.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datatable/js/vfs_fonts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datepicker/date-picker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datepicker/datepicker.custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datepicker/datepicker.en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/datepicker/datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/drag/dragable_sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/drag/jquery.ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/drag/sortable-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-brands-400d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-regular-400d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/font_awesome/webfonts/fa-solid-900d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/gijgo/gijgo.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/jquery-sparkline/jquery.sparkline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/jquery-sparkline/spactkine_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/mapsjs-core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/mapsjs-mapevents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/mapsjs-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/mapsjs-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/mapJs/mapsjs_service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/material_icon/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/material_icon/material-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/material_icon/material-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/morris/morris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/niceselect/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/niceselect/js/jquery.nice-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/nvd3/d3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/nvd3/layers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/nvd3/nv.d3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/owl_carousel/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/owl_carousel/css/owl.video.play.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/owl_carousel/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/photoswip/photoswipe-ui-default.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/photoswip/photoswipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/photoswip/photoswipe.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/progressbar/jquery.barfiller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll/perfect-scrollbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll/scrollable-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll/scrollable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll_reval/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll_reval/reveal-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/scroll_reval/scrollreveal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/select2/css/select2.min.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/swiper_slider/css/swiper.min.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/tagsinput/tagsinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/tagsinput/tagsinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/text_editor/fonts/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/text_editor/fonts/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/text_editor/fonts/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/text_editor/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/text_editor/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/fonts/themify9f24.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/fonts/themify9f24.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/fonts/themify9f24.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/fonts/themify9f24.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/fonts/themifyd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/themefy_icon/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-2.0.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-asia-mill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-au-mill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-chicago-mill-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-in-mill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-uk-mill-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-us-aea-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/jvectormap-world-mill-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/map-vector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendors/verctorMap/vector-map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin-dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/shared/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/shared/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/product/list-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/product/list-product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sidebars/nav-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sidebars/nav-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sidebars/slide-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sidebars/slide-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,13 +323,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FIT-TDC\ThucTapDoanhNghiep\2-Laravel\demo-crud-laravel\public\icons" />
+      <recent name="E:\FIT-TDC\ThucTapDoanhNghiep\2-Laravel\demo-crud-laravel\public" />
+      <recent name="E:\FIT-TDC\ThucTapDoanhNghiep\2-Laravel\demo-crud-laravel\public\js" />
+      <recent name="E:\FIT-TDC\ThucTapDoanhNghiep\2-Laravel\demo-crud-laravel\public\css" />
       <recent name="E:\FIT-TDC\ThucTapDoanhNghiep\2-Laravel\demo-crud-laravel" />
     </key>
   </component>
@@ -185,6 +359,8 @@
       <workItem from="1618630896656" duration="21076000" />
       <workItem from="1618847001378" duration="5189000" />
       <workItem from="1620348936290" duration="591000" />
+      <workItem from="1620546448263" duration="4580000" />
+      <workItem from="1620569558775" duration="10383000" />
     </task>
     <servers />
   </component>
