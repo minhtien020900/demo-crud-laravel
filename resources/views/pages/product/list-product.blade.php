@@ -118,6 +118,13 @@
         </table>
     </div>
 @endsection
+@section('add-new')
+    <div class="add_button ml-10">
+{{--        <a href="{{route('product.create')}}" data-toggle="modal" data-target="#addcategory" class="btn_1">Add New</a>--}}
+        <a href="{{route('product.create')}}" class="btn_1">Add New</a>
+
+    </div>
+@endsection
 @section('js-content')
     <!-- responsive table -->
     <script src="{{asset('vendors/datatable/js/jquery.dataTables.min.js')}}"></script>

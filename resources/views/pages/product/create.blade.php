@@ -1,4 +1,4 @@
 @extends('pages.admin.dashboard')
-@section('content')
-    
+@section('dashboard-content')
+    a
 @endsection

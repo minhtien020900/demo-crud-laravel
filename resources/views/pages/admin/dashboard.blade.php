@@ -28,12 +28,12 @@
 
     <!-- date picker -->
     <link rel="stylesheet" href="{{asset('vendors/datepicker/date-picker.css')}}"/>
+
+    @yield('css-content')
     <!-- scrollabe  -->
     <link rel="stylesheet" href="{{asset('vendors/scroll/scrollable.css')}}"/>
     <!-- datatable CSS -->
-    <link rel="stylesheet" href="{{asset('vendors/datatable/css/jquery.dataTables.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('vendors/datatable/css/responsive.dataTables.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('vendors/datatable/css/buttons.dataTables.min.css')}}"/>
+
     <!-- text editor css -->
     <link rel="stylesheet" href="{{asset('vendors/text_editor/summernote-bs4.css')}}"/>
     <!-- morris css -->
